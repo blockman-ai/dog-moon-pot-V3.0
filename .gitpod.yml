@@ -1,0 +1,14 @@
+# .gitpod.yml
+image:
+  file: .gitpod.Dockerfile
+
+tasks:
+  - init: anchor build
+    command: solana-test-validator
+  - command: echo "Ready to deploy DOG Moon POT!"
+
+ports:
+  - port: 8899
+    onOpen: ignore
+  - port: 8900
+    onOpen: ignore
